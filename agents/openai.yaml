@@ -1,0 +1,7 @@
+interface:
+  display_name: "黑白配角色复刻"
+  short_description: "严格依据定稿图复刻余小白与梁小黑的角色形象和统一视觉风格"
+  icon_small: "./assets/heibaipei-character-reference.png"
+  icon_large: "./assets/heibaipei-character-reference.png"
+  brand_color: "#FF6A32"
+  default_prompt: "Use $heibaipei to create a new scene with 余小白 and 梁小黑 while preserving their finalized character design."
