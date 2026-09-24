@@ -1,6 +1,6 @@
 interface:
   display_name: "黑白配角色复刻"
-  short_description: "严格依据定稿图复刻余小白与梁小黑的角色形象和统一视觉风格"
+  short_description: "复刻余小白3D毛绒与梁小黑可变形二维手绘的混合角色系统"
   icon_small: "./assets/heibaipei-canonical-pair.png"
   icon_large: "./assets/heibaipei-canonical-pair.png"
   brand_color: "#FF6A32"

@@ -1,6 +1,6 @@
 ---
 name: heibaipei
-description: 严格依据定稿图生成或编辑包含余小白、梁小黑的品牌角色画面，锁定角色比例、材质、配色与关系。适用于角色海报、小红书配图、连续故事、表情动作和生活场景；不用于重新设计角色或转换其他画风。
+description: 严格依据定稿图生成或编辑余小白与梁小黑的混合媒介品牌画面：余小白保持 3D 毛绒 CGI，梁小黑保持可变形的二维纯黑手绘小人。适用于角色海报、小红书配图、连续故事、表情动作和生活场景；不用于重新设计角色或统一成单一画风。
 ---
 
 # 黑白配角色复刻
@@ -16,12 +16,14 @@ description: 严格依据定稿图生成或编辑包含余小白、梁小黑的�
 - 两人同框：[双角色身份锚点](assets/heibaipei-canonical-pair.png)
 - 只有余小白：[余小白身份锚点](assets/yuxiaobai-canonical.png)
 - 只有梁小黑：[梁小黑身份锚点](assets/liangxiaohei-canonical.png)
+- 梁小黑需要动作或形态变化：[梁小黑手绘动作与变形参考](assets/liangxiaohei-handdrawn-morphs.png)
 - [完整角色定稿图](assets/heibaipei-character-reference.png) 只作为动作、表情和色板的第二参考，不得成为唯一输入。
 
 使用图像生成工具时：
 
 - 将对应身份锚点作为 reference image，不作为待编辑底图；使用工具可提供的最高参考保真度。
 - 两人同框且工具支持多参考图时，同时传入双角色锚点和两个单角色锚点。
+- 梁小黑承担动作、工具或结构隐喻时，额外传入手绘动作与变形参考。
 - 连续多张时，每张都传入身份锚点；第 2 张起可同时传入上一张已验收画面，但上一张不得替代身份锚点。
 - 参考图与用户临时描述冲突时，角色身份、身体比例、材质和核心配色以身份锚点为准；场景、动作和构图以用户要求为准。
 - 不允许仅靠文字提示生成这两个角色。
@@ -31,6 +33,7 @@ description: 严格依据定稿图生成或编辑包含余小白、梁小黑的�
 ### 余小白
 
 - 普通成年打工女孩的人格，不是人类、婴儿、宠物或明确动物。
+- 角色本体采用风格化 3D 毛绒 CGI：具有真实体积、柔和自然光、轻微景深、细密卷绒和清晰针织纹理。不是二维手绘、扁平插画或线稿角色。
 - 白色、柔软、毛茸茸的低矮宽圆身体；坐姿时视觉宽度明显大于高度。头与身体是一体化软团轮廓，没有脖子、腰线或雪人式上下两段。
 - 毛发由细密、柔软、略带卷曲的绒簇构成，不是光滑塑料、短绒球或均匀磨砂表面。
 - 大号黑白圆椭圆眼睛占据面部主体；疲惫表情通过厚重上眼皮和半垂眼实现。禁止缩成两颗小黑豆或针点眼。
@@ -42,14 +45,16 @@ description: 严格依据定稿图生成或编辑包含余小白、梁小黑的�
 
 ### 梁小黑
 
-- 从头到脚是完整、连续、干净的纯黑色圆润小人，不是宠物或动物。
-- 轮廓是低矮、不规则、头身连成一体的软团小人；没有脖子、肩线、胸腔、腰线或人类站立躯干。默认不得高大、健壮或像保安一样站在余小白身后。
-- 身体内部不得出现白色铅笔痕迹、灰色毛发、素描排线、白色纹理、露底或白色身体高光。
-- 只有眼睛和极细小嘴允许打破纯黑：眼睛是尺寸克制的白色竖椭圆与黑色瞳孔，不是巨大圆形 googly eyes。
-- 保持定稿图的头身比例、不规则轮廓和短小四肢。
+- 梁小黑是叠加在余小白 3D 世界中的二维手绘角色层，不与余小白统一成 3D 毛绒材质。混合媒介反差是有意设计，不得“风格统一”掉。
+- 从头到脚是完整、连续、干净的纯黑实心手绘形状，不是宠物或动物。外轮廓轻微抖动、不规则，有白板草图般的手工感；不做矢量般机械光滑的边缘。
+- 身体内部不得出现 3D 体积光、渐变、白色高光、灰色毛发、素描排线、白色纹理或露底。
+- 只有眼睛和极细小嘴允许打破纯黑：眼睛是尺寸克制的白色椭圆或白点眼与黑色瞳孔，不是巨大圆形 googly eyes。
+- 默认形态是低矮、头身相连的黑豆小人和短细四肢，没有脖子、肩线、胸腔或人类站立躯干。
 - 不增加头发、灰色发簇、头顶装饰、猫耳、尾巴、帽子、衣服或固定配饰。
-- 两人同框时，梁小黑通常约为余小白视觉高度的 55%–75%，不得高过余小白并抢占主角位置，除非用户明确要求透视或尺度变化。
-- 用凝视、沉默、歪头、趴着、举牌、搬东西、放大镜或记笔记制造冷幽默，不用夸张表情。
+- 两人同框时默认小于余小白，不得高大地站在余小白身后或抢占视觉主角，除非当前隐喻明确需要尺度变化。
+- 可以根据职责变形成圆柱、黑豆、黑盒、漏斗、影子、洞口或机器内部黑块；变形后仍须保留纯黑手绘填充、标志性白眼睛、极简嘴和冷静人格，使人立即认出梁小黑。
+- 变形必须服务当前核心动作，例如观察、分拣、承接、筛选、搬运、记录或吐槽；不要为了炫技随意变形。
+- 用凝视、沉默、歪头、趴着、举牌、搬东西、拿放大镜或记笔记制造冷幽默，不用夸张卖萌表情。
 
 ## 强制身份提示块
 
@@ -58,8 +63,8 @@ description: 严格依据定稿图生成或编辑包含余小白、梁小黑的�
 ```text
 IDENTITY LOCK — reference images are authoritative character sheets, not loose inspiration.
 Yu Xiaobai: one-piece low, wide white curly-fur plush body; no neck or waist; very large black-and-white oval eyes with heavy upper lids; tiny nose and mouth; faint warm-pink cheeks; short soft limbs; bright orange ribbed knit beanie with a folded brim and NO pom-pom, ears, hair, or decorations.
-Liang Xiaohei: small low irregular all-black blob person; head and body form one continuous silhouette; no neck, shoulders, waist, hair, tuft, ears, tail, clothes, gray marks, white texture, or body highlights; only restrained white oval eyes with black pupils and a tiny mouth may be non-black. He must not become a tall humanoid or tower over Yu Xiaobai.
-Preserve the exact facial geometry, silhouette, material, proportions, and color placement from the references. Do not redesign, beautify, animalize, humanize, or substitute another 3D cartoon style.
+Liang Xiaohei: a flat 2D hand-drawn pure-black character composited into Yu Xiaobai's 3D world; solid black ink fill, slightly wobbly irregular contour, no 3D volume, gradient, highlight, fur, neck, shoulders, waist, hair, tuft, ears, tail, or clothes; only restrained white oval/dot eyes with black pupils and a tiny mouth may be non-black. His shape may transform into a cylinder, bean, box, funnel, shadow, hole, or machine block when the scene's action requires it, while keeping the eyes and identity unmistakable. He must not become a tall humanoid or a 3D plush figure.
+Preserve Yu Xiaobai's exact 3D facial geometry, silhouette, material, proportions, and color placement. Preserve Liang Xiaohei's flat hand-drawn visual language and identity. Do not redesign, beautify, animalize, humanize, or homogenize both characters into one rendering style.
 ```
 
 ## 角色关系
@@ -68,10 +73,10 @@ Preserve the exact facial geometry, silhouette, material, proportions, and color
 
 ## 视觉与构图
 
-- 温暖、干净、柔和的 3D 毛绒角色视觉，严格贴近定稿图。
+- 整体是明确的混合媒介：余小白和生活道具采用温暖柔和的 3D 毛绒 CGI；梁小黑采用二维纯黑手绘层。两者共处同一空间，但不共享材质。
 - 奶油白或暖白背景，柔和自然光，低对比度，大量留白。
 - 橙色只作为余小白核心强调色；梁小黑保持纯黑；可少量使用浅蓝提示色，道具保持低饱和。
-- 不使用霓虹色、复杂背景、强烈电影光影、二维动漫、手绘线稿替代角色或其他 3D 卡通 IP 风格。
+- 不使用霓虹色、复杂背景、强烈电影光影、二维动漫或其他 3D 卡通 IP 风格；不得把余小白画成手绘，也不得把梁小黑渲染成 3D 毛绒。
 - 一张图只表达一个核心事件：一个余小白动作、一个梁小黑反应、少量必要道具。
 - 余小白通常是视觉主角，梁小黑用一个简单动作提供第二层笑点；不要让两人同时做很多事。
 
@@ -86,8 +91,8 @@ Preserve the exact facial geometry, silhouette, material, proportions, and color
 
 - 余小白出现小豆眼、眼睛位置明显变化、光滑球体、雪人式分段身体、脖子或长手长腿。
 - 余小白的橙帽出现绒球、耳朵、文字、第二种主色或不同帽型。
-- 梁小黑出现头发或头顶发簇、灰白纹理、身体高光、非纯黑躯干、猫耳、尾巴或衣服。
-- 梁小黑出现明显肩颈、胸腰、人类身材，或在正常同框中高过余小白、成为视觉主角。
+- 梁小黑被渲染成 3D 毛绒、塑料或有体积光的角色；或出现头发、头顶发簇、灰白纹理、身体高光、非纯黑躯干、猫耳、尾巴或衣服。
+- 梁小黑出现明显肩颈、胸腰、人类身材，或在普通同框中高过余小白、成为视觉主角。为核心隐喻服务的圆柱、黑豆、黑盒、漏斗、影子和机器黑块不算失败。
 - 任一角色变成明确动物、人类、婴儿、通用雪人、光滑塑料公仔或其他现成 3D IP 风格。
 - 两人之间变成主人与宠物、老师与学生或法官与被审者关系。
 
@@ -101,9 +106,9 @@ Preserve the exact facial geometry, silhouette, material, proportions, and color
 ## 输出前检查
 
 - 余小白是否仍是低矮宽圆的一体化白色卷绒角色，且大眼睛、脸部和比例一致？橙帽是否为无绒球的宽折边罗纹帽？
-- 梁小黑是否全身纯黑且内部完全没有白痕、灰毛、排线或白色高光？
-- 梁小黑是否仍是低矮头身一体的小人，而不是高大人形、动物或宠物？头顶是否完全无毛发和装饰？
-- 两人的材质、比例和视觉语言是否统一？
+- 梁小黑是否仍是二维纯黑手绘层，内部没有渐变、体积光、白痕、灰毛或白色高光？
+- 梁小黑是否仍可被认出，而不是高大人形、动物或宠物？若发生圆柱、盒子、漏斗等变形，是否服务于当前动作？
+- 余小白的 3D 毛绒与梁小黑的二维手绘是否保持有意的混合媒介反差，而不是被统一成同一种材质？
 - 是否只有一个核心事件，背景温暖干净并保留大量留白？
 - 手脚数量、接触关系和道具数量是否正常？
 - 中文是否准确，品牌名是否为「批了吗」？
